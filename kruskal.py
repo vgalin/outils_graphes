@@ -7,7 +7,6 @@ def kruskal(graphe: Graphe):
 
     sommets = [sommet for sommet in graphe]
 
-
     aretes = graphe.liens(trier=True)
 
     ds = DisjointSet(sommets)

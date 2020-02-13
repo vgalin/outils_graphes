@@ -11,8 +11,8 @@ class Graphe():
                 for j, val in enumerate(ligne):
                     if val != 0:
                         self.ajout_lien(
-                            depart=Graphe.to_letter(j),
-                            destination=Graphe.to_letter(i),
+                            depart=Graphe.to_letter(i),
+                            destination=Graphe.to_letter(j),
                             distance=val
                         )
 
@@ -27,6 +27,9 @@ class Graphe():
             liens = sorted(liens,key=lambda item: item[2]) 
 
         return liens
+
+    def distance(self, depart, destination):
+        return self._noeuds[depart][destination]
 
     @staticmethod           
     def to_letter(num):
